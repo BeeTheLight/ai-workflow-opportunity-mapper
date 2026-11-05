@@ -1,0 +1,27 @@
+{
+  "_note": "Expert judgment labels for the Kestrel Pay sample data. Review and adjust these yourself: they encode the domain call on what should and should not be automated. verdict: automate = AI/automation can do most of the work; assist = AI prepares, a human decides; no = do not automate now. must_keep_human = regulated or high-harm decision.",
+  "labels": {
+    "SUP:payout_status_inquiry":                               {"verdict": "automate", "must_keep_human": false},
+    "SUP:fx_rate_query":                                       {"verdict": "automate", "must_keep_human": false},
+    "SUP:api_integration_help":                                {"verdict": "automate", "must_keep_human": false},
+    "SUP:settlement_reconciliation_mismatch":                  {"verdict": "assist",   "must_keep_human": false},
+    "SUP:chargeback_dispute":                                  {"verdict": "assist",   "must_keep_human": false},
+    "SUP:kyc_document_resubmission":                           {"verdict": "automate", "must_keep_human": false},
+    "SUP:failed_transaction_refund":                           {"verdict": "no",       "must_keep_human": false},
+    "SUP:account_access_2fa":                                  {"verdict": "no",       "must_keep_human": true},
+    "ONB:application_intake_and_completeness_check":           {"verdict": "automate", "must_keep_human": false},
+    "ONB:business_registration_document_verification":         {"verdict": "assist",   "must_keep_human": false},
+    "ONB:director_ubo_identity_verification":                  {"verdict": "no",       "must_keep_human": true},
+    "ONB:sanctions_and_pep_screening_of_directors_ubos":        {"verdict": "assist",   "must_keep_human": true},
+    "ONB:website_and_business_model_review_prohibited_activities": {"verdict": "no",   "must_keep_human": true},
+    "ONB:risk_scoring_and_tier_assignment":                    {"verdict": "no",       "must_keep_human": true},
+    "ONB:settlement_bank_account_verification":                {"verdict": "assist",   "must_keep_human": false},
+    "ONB:pricing_and_contract_generation":                     {"verdict": "no",       "must_keep_human": false},
+    "ONB:api_key_provisioning_and_sandbox_setup_email":        {"verdict": "automate", "must_keep_human": false},
+    "ONB:go_live_checklist_call":                              {"verdict": "automate", "must_keep_human": false},
+    "CMP:sanctions_screening_alert_name_match":                {"verdict": "assist",   "must_keep_human": true},
+    "CMP:transaction_monitoring_alert":                        {"verdict": "assist",   "must_keep_human": true},
+    "CMP:periodic_kyc_refresh":                                {"verdict": "assist",   "must_keep_human": false},
+    "CMP:enhanced_due_diligence_high_risk_merchant":           {"verdict": "no",       "must_keep_human": true}
+  }
+}

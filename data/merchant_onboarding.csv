@@ -1,0 +1,11 @@
+step_id,step_name,owner_role,monthly_volume,avg_minutes,rework_rate,sla_hours,systems,regulatory_sensitivity,notes
+ONB-01,Application intake and completeness check,Onboarding Associate,420,12,0.28,24,Typeform; Google Sheets,Low,Associate checks 23 required fields by hand; ~28% of applications bounce back for missing items.
+ONB-02,Business registration document verification,Onboarding Associate,420,18,0.22,48,Registry portal; Google Drive,Medium,Registration number looked up manually on government registry portal and compared to uploaded certificate.
+ONB-03,Director / UBO identity verification,Compliance Analyst,420,15,0.15,48,ID vendor dashboard,High,Vendor returns match score; analyst reviews every result including high-confidence passes.
+ONB-04,Sanctions and PEP screening of directors/UBOs,Compliance Analyst,420,8,0.05,24,Screening tool,High,Screening is automated; analyst manually clears name-only partial matches.
+ONB-05,Website and business-model review (prohibited activities),Compliance Analyst,380,25,0.1,72,Browser; internal policy PDF,High,"Analyst browses merchant site, checks against prohibited/restricted list, writes summary."
+ONB-06,Risk scoring and tier assignment,Compliance Analyst,380,10,0.08,24,Risk matrix spreadsheet,Medium,Scores 9 factors in a spreadsheet; copies result into CRM.
+ONB-07,Settlement bank account verification,Onboarding Associate,360,9,0.18,24,Bank verification API; CRM,Medium,Name-on-account mismatches resolved by email back-and-forth.
+ONB-08,Pricing and contract generation,Sales Ops,340,14,0.12,24,Google Docs; DocuSign,Low,Contract assembled from template; pricing table retyped from CRM deal record.
+ONB-09,API key provisioning and sandbox setup email,Onboarding Associate,340,6,0.04,8,Admin console; Gmail,Low,Same welcome email sent each time with keys pasted in.
+ONB-10,Go-live checklist call,Account Manager,300,30,0.05,72,Zoom; checklist doc,Low,Walks merchant through a 15-item go-live checklist; most items are confirmable from logs.

@@ -1,0 +1,391 @@
+{
+  "summary": "Kestrel Pay's manual load is concentrated in three places: repetitive payout-status questions, onboarding intake rework, and false-positive compliance alerts. The fastest, lowest-risk wins are grounded self-service for payout status and a completeness pre-check on applications. The largest pool of hours sits in sanctions and monitoring alerts, but those are regulated decisions, so the recommendation is AI-prepared case files with analyst sign-off, phased in after controls are agreed with the MLRO.",
+  "opportunities": [
+    {
+      "id": "OPP-01",
+      "title": "Grounded payout-status answers in chat and agent assist",
+      "process": "Customer support",
+      "task_keys": [
+        "SUP:payout_status_inquiry",
+        "SUP:fx_rate_query"
+      ],
+      "problem": "About 30% of tickets ask where a payout is. The answer already exists in the settlement dashboard; agents look it up and paste it into a macro.",
+      "proposed_solution": "Answer payout and FX-rate questions from the merchant's own settlement records via in-app chat and WhatsApp, citing the payout reference and expected date. Unresolved or unusual cases hand off to an agent with the lookup already done.",
+      "automation_pattern": "Retrieval-grounded self-service",
+      "human_role": "Agents handle anything the record cannot explain (missing payouts, partner delays) and own customer-facing exceptions.",
+      "feasibility": 5,
+      "feasibility_rationale": "Data is structured and already in the settlement system; answer templates exist.",
+      "risk": 2,
+      "risk_rationale": "Wrong ETA is an annoyance, not a regulatory issue. The 2024 chatbot failed because it was not grounded in merchant data, which this design addresses.",
+      "complexity": "S",
+      "suggested_automatable_share": 0.65,
+      "suggested_review_overhead": 0.1,
+      "evidence": [
+        {
+          "source_id": "SUP-0002",
+          "why": "Agent copies ETA from dashboard into reply"
+        },
+        {
+          "source_id": "SUP-0005",
+          "why": "Same lookup-and-paste pattern"
+        },
+        {
+          "source_id": "NOTES-P02",
+          "why": "Support lead: a third of the queue, answer is in the dashboard"
+        },
+        {
+          "source_id": "NOTES-P03",
+          "why": "Past chatbot failed because it could not see payout status"
+        }
+      ],
+      "open_questions": [
+        "Does the settlement system expose a per-merchant API we can query in real time?"
+      ]
+    },
+    {
+      "id": "OPP-02",
+      "title": "Application completeness pre-check at submission",
+      "process": "Merchant onboarding",
+      "task_keys": [
+        "ONB:application_intake_and_completeness_check",
+        "SUP:kyc_document_resubmission"
+      ],
+      "problem": "Associates read every application against 23 fields and 4 documents; about 28% bounce back, which also generates document-resubmission tickets.",
+      "proposed_solution": "Check fields and classify uploaded documents at the moment of submission (right document in the right slot, legible, not expired) and tell the merchant immediately what is missing.",
+      "automation_pattern": "Document extraction and verification",
+      "human_role": "Associates review only flagged applications. Compliance judgments are unchanged.",
+      "feasibility": 4,
+      "feasibility_rationale": "Field checks are rules; document classification and legibility checks are mature.",
+      "risk": 2,
+      "risk_rationale": "Pre-check only gates completeness, not eligibility. Errors send a merchant back to upload again, which is the current outcome anyway.",
+      "complexity": "S",
+      "suggested_automatable_share": 0.55,
+      "suggested_review_overhead": 0.2,
+      "evidence": [
+        {
+          "source_id": "ONB-01",
+          "why": "12 min per application, 28% rework rate"
+        },
+        {
+          "source_id": "SUP-0010",
+          "why": "Agent requests re-upload of unreadable ID"
+        },
+        {
+          "source_id": "NOTES-P07",
+          "why": "Onboarding manager: biggest drag is the first step"
+        },
+        {
+          "source_id": "SOP-P02",
+          "why": "SOP defines 23 fields and 4 documents to check"
+        }
+      ],
+      "open_questions": []
+    },
+    {
+      "id": "OPP-03",
+      "title": "Onboarding emails and go-live checklist from API logs",
+      "process": "Merchant onboarding",
+      "task_keys": [
+        "ONB:api_key_provisioning_and_sandbox_setup_email",
+        "ONB:go_live_checklist_call"
+      ],
+      "problem": "The sandbox welcome email is identical every time, and most of the 15-item go-live checklist can be confirmed from the merchant's own API activity.",
+      "proposed_solution": "Trigger the welcome email automatically when keys are issued, and pre-fill the go-live checklist from API logs so the call covers only the items that are not yet green.",
+      "automation_pattern": "Deterministic rules / RPA",
+      "human_role": "Account managers keep the call for strategic merchants and anything red on the checklist.",
+      "feasibility": 5,
+      "feasibility_rationale": "Template and log data already exist.",
+      "risk": 1,
+      "risk_rationale": "Low exposure: worst case is an unnecessary call.",
+      "complexity": "S",
+      "suggested_automatable_share": 0.5,
+      "suggested_review_overhead": 0.1,
+      "evidence": [
+        {
+          "source_id": "ONB-09",
+          "why": "Same welcome email sent each time"
+        },
+        {
+          "source_id": "ONB-10",
+          "why": "30-minute call walking a 15-item checklist"
+        },
+        {
+          "source_id": "NOTES-P09",
+          "why": "Checklist items are confirmable from API logs"
+        },
+        {
+          "source_id": "SOP-P07",
+          "why": "SOP: provision keys, send WEL-02, schedule go-live call"
+        }
+      ],
+      "open_questions": []
+    },
+    {
+      "id": "OPP-04",
+      "title": "Developer-support answers grounded in API docs and request logs",
+      "process": "Customer support",
+      "task_keys": [
+        "SUP:api_integration_help"
+      ],
+      "problem": "API tickets repeat (live keys in sandbox, failing webhooks) and the docs already answer most of them.",
+      "proposed_solution": "Classify incoming developer tickets, check the merchant's recent API errors, and draft a reply that links the exact docs section. Simple cases are answered directly.",
+      "automation_pattern": "Retrieval-grounded self-service",
+      "human_role": "Solutions engineers handle anything involving idempotency, money movement or custom builds.",
+      "feasibility": 4,
+      "feasibility_rationale": "Docs and error logs are structured; error classes are few.",
+      "risk": 1,
+      "risk_rationale": "Technical guidance only; no money movement.",
+      "complexity": "S",
+      "suggested_automatable_share": 0.4,
+      "suggested_review_overhead": 0.15,
+      "evidence": [
+        {
+          "source_id": "SUP-0013",
+          "why": "Live-key-in-sandbox ticket, 'same issue as many others'"
+        },
+        {
+          "source_id": "SUP-0004",
+          "why": "Webhook endpoint returning 500"
+        },
+        {
+          "source_id": "NOTES-P06",
+          "why": "Docs answer most API tickets, developers miss the page"
+        }
+      ],
+      "open_questions": []
+    },
+    {
+      "id": "OPP-05",
+      "title": "Settlement reconciliation auto-matching with explanations",
+      "process": "Customer support",
+      "task_keys": [
+        "SUP:settlement_reconciliation_mismatch"
+      ],
+      "problem": "Each mismatch ticket means exporting three reports and matching in Excel; about a third still escalate to finance ops.",
+      "proposed_solution": "Match ledger, partner-bank and processor records automatically, and have the model explain the remaining breaks in plain language (timing, FX, missing batch) for the agent to send.",
+      "automation_pattern": "Deterministic rules / RPA",
+      "human_role": "Finance ops resolves true breaks and signs off any balance adjustment.",
+      "feasibility": 3,
+      "feasibility_rationale": "Matching logic is deterministic, but needs reliable report feeds from partners.",
+      "risk": 3,
+      "risk_rationale": "A wrong explanation to a merchant about money is a trust issue; adjustments stay manual.",
+      "complexity": "M",
+      "suggested_automatable_share": 0.6,
+      "suggested_review_overhead": 0.2,
+      "evidence": [
+        {
+          "source_id": "SUP-0001",
+          "why": "Agent exports three reports and matches in Excel"
+        },
+        {
+          "source_id": "SUP-0006",
+          "why": "Missing transactions rebuilt from ledger export"
+        },
+        {
+          "source_id": "NOTES-P04",
+          "why": "Support lead: most-dreaded ticket, up to an hour each"
+        }
+      ],
+      "open_questions": [
+        "Are partner-bank statements available by API or only as portal downloads?"
+      ]
+    },
+    {
+      "id": "OPP-06",
+      "title": "Registry lookup and bank-account name matching",
+      "process": "Merchant onboarding",
+      "task_keys": [
+        "ONB:business_registration_document_verification",
+        "ONB:settlement_bank_account_verification"
+      ],
+      "problem": "Associates type registration numbers into the government portal and compare results to certificates by eye; name-on-account mismatches cause email back-and-forth.",
+      "proposed_solution": "Extract fields from the certificate, query the registry, and show a side-by-side match report with discrepancies highlighted. Fuzzy-match bank account names and draft the clarification email when needed.",
+      "automation_pattern": "Document extraction and verification",
+      "human_role": "Associate confirms the match report; discrepancies go to a compliance analyst as today.",
+      "feasibility": 3,
+      "feasibility_rationale": "Registry access method is uncertain; extraction itself is mature.",
+      "risk": 3,
+      "risk_rationale": "A false match creates exposure, so every result is human-confirmed.",
+      "complexity": "M",
+      "suggested_automatable_share": 0.5,
+      "suggested_review_overhead": 0.25,
+      "evidence": [
+        {
+          "source_id": "ONB-02",
+          "why": "18 min per application, 22% rework"
+        },
+        {
+          "source_id": "ONB-07",
+          "why": "Name-on-account mismatches resolved by email"
+        },
+        {
+          "source_id": "NOTES-P08",
+          "why": "Mechanical, but a wrong match creates exposure"
+        },
+        {
+          "source_id": "SOP-P03",
+          "why": "SOP requires registry confirmation"
+        }
+      ],
+      "open_questions": [
+        "Does the registry offer an API or bulk lookup, or only a web portal?"
+      ]
+    },
+    {
+      "id": "OPP-07",
+      "title": "Transaction-monitoring and KYC-refresh rationale drafting",
+      "process": "Compliance operations",
+      "task_keys": [
+        "CMP:transaction_monitoring_alert",
+        "CMP:periodic_kyc_refresh"
+      ],
+      "problem": "Most monitoring alerts are known seasonal patterns; the real cost is writing an audit-ready rationale for each one.",
+      "proposed_solution": "Pull 90 days of merchant history, prior alerts and invoices into a case summary and draft the closing rationale for the analyst to edit and sign.",
+      "automation_pattern": "LLM drafting with human review",
+      "human_role": "The analyst decides every alert outcome and signs the rationale. Escalations to the MLRO are unchanged.",
+      "feasibility": 4,
+      "feasibility_rationale": "Inputs are structured; drafting from them is a strong LLM use case.",
+      "risk": 3,
+      "risk_rationale": "Regulated record; mitigated by mandatory analyst sign-off and an audit trail of edits.",
+      "complexity": "M",
+      "suggested_automatable_share": 0.35,
+      "suggested_review_overhead": 0.3,
+      "evidence": [
+        {
+          "source_id": "CMP-0003",
+          "why": "Rationale written for a closed alert"
+        },
+        {
+          "source_id": "CMP-0008",
+          "why": "90 days of activity reviewed manually"
+        },
+        {
+          "source_id": "NOTES-P12",
+          "why": "Real cost is writing rationale that survives audit"
+        },
+        {
+          "source_id": "NOTES-P13",
+          "why": "AI may prepare the case file, not close alerts"
+        }
+      ],
+      "open_questions": []
+    },
+    {
+      "id": "OPP-08",
+      "title": "Sanctions name-match case preparation",
+      "process": "Compliance operations",
+      "task_keys": [
+        "CMP:sanctions_screening_alert_name_match",
+        "ONB:sanctions_and_pep_screening_of_directors_ubos"
+      ],
+      "problem": "Over 90% of name-match alerts are false positives; analysts re-check DOB and country fields the system already holds.",
+      "proposed_solution": "For each alert, assemble the list entry and the customer's verified identity data side by side, highlight differing fields, and pre-draft the disposition note. The analyst makes and records the decision.",
+      "automation_pattern": "Agentic case preparation",
+      "human_role": "A named analyst clears or escalates every alert. No alert is closed by software.",
+      "feasibility": 4,
+      "feasibility_rationale": "Field comparison is simple; the work is integration and controls.",
+      "risk": 4,
+      "risk_rationale": "Sanctions decisions carry regulatory liability; requires MLRO-agreed controls, sampling QA and a data processing agreement for any AI vendor.",
+      "complexity": "M",
+      "suggested_automatable_share": 0.45,
+      "suggested_review_overhead": 0.35,
+      "evidence": [
+        {
+          "source_id": "CMP-0001",
+          "why": "Cleared after manual DOB and nationality comparison"
+        },
+        {
+          "source_id": "CMP-0002",
+          "why": "Fuzzy match on a different country and registration"
+        },
+        {
+          "source_id": "NOTES-P11",
+          "why": "More than nine in ten alerts are false positives"
+        },
+        {
+          "source_id": "NOTES-P13",
+          "why": "Must stay with a named analyst"
+        },
+        {
+          "source_id": "NOTES-P14",
+          "why": "Personal data only to approved processors"
+        },
+        {
+          "source_id": "SOP-P04",
+          "why": "Partial matches cleared by analyst with recorded rationale"
+        }
+      ],
+      "open_questions": [
+        "Will the MLRO accept AI-prepared case files, and what QA sampling rate?"
+      ]
+    },
+    {
+      "id": "OPP-09",
+      "title": "Chargeback evidence pack assembly",
+      "process": "Customer support",
+      "task_keys": [
+        "SUP:chargeback_dispute"
+      ],
+      "problem": "Agents chase merchants for evidence over several emails and write each dispute narrative by hand under strict scheme deadlines.",
+      "proposed_solution": "Send the merchant a structured evidence request on day one, collect uploads in one place, and draft the dispute narrative from order, delivery and device data.",
+      "automation_pattern": "Agentic case preparation",
+      "human_role": "Agents review and submit every dispute to the scheme portal.",
+      "feasibility": 3,
+      "feasibility_rationale": "Evidence formats vary by merchant.",
+      "risk": 3,
+      "risk_rationale": "Missed deadlines or weak narratives lose money; human submits.",
+      "complexity": "M",
+      "suggested_automatable_share": 0.35,
+      "suggested_review_overhead": 0.3,
+      "evidence": [
+        {
+          "source_id": "SUP-0003",
+          "why": "Evidence gathered over four emails"
+        },
+        {
+          "source_id": "SUP-0026",
+          "why": "Narrative written manually from logs"
+        },
+        {
+          "source_id": "NOTES-P05",
+          "why": "Strict scheme deadlines"
+        }
+      ],
+      "open_questions": []
+    }
+  ],
+  "not_recommended": [
+    {
+      "task_key": "CMP:enhanced_due_diligence_high_risk_merchant",
+      "reason": "Low volume and judgment-heavy. Revisit adverse-media gathering only after the sanctions case-prep controls are proven."
+    },
+    {
+      "task_key": "ONB:website_and_business_model_review_prohibited_activities",
+      "reason": "Determines eligibility under the prohibited-activities policy; keep human. A site summary could be added later as an input, not a decision."
+    },
+    {
+      "task_key": "ONB:risk_scoring_and_tier_assignment",
+      "reason": "Sets the approval route. Moving the spreadsheet into the CRM is a systems fix, not AI."
+    },
+    {
+      "task_key": "SUP:account_access_2fa",
+      "reason": "Identity reset is an account-takeover vector; automating it raises fraud risk."
+    },
+    {
+      "task_key": "SUP:failed_transaction_refund",
+      "reason": "Root cause is a refund API error forcing manual processing. Fix the bug first."
+    },
+    {
+      "task_key": "ONB:director_ubo_identity_verification",
+      "reason": "The vendor already automates this. Revisit the policy of reviewing every high-confidence pass before adding AI."
+    },
+    {
+      "task_key": "ONB:pricing_and_contract_generation",
+      "reason": "Template merge from CRM; a standard integration, not an AI problem."
+    }
+  ],
+  "_meta": {
+    "source": "illustrative",
+    "model": "n/a (authored sample; replace with a live run)"
+  }
+}

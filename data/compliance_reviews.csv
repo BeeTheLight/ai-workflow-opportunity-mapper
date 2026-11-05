@@ -1,0 +1,151 @@
+review_id,created_at,review_type,alert_source,outcome,minutes_spent,analyst,notes
+CMP-0001,2026-09-17 09:58,Sanctions screening alert (name match),Screening tool,Closed - false positive,18,Analyst C,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0002,2026-09-04 23:21,Sanctions screening alert (name match),Screening tool,Closed - false positive,14,Analyst D,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0003,2026-09-19 13:41,Transaction monitoring alert,TM rules engine,Closed - false positive,43,Analyst C,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0004,2026-09-19 19:59,Sanctions screening alert (name match),Screening tool,Closed - false positive,17,Analyst A,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0005,2026-09-12 01:08,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,107,Analyst B,High-volume remittance merchant: reviewed ownership chain across 3 jurisdictions.
+CMP-0006,2026-09-23 10:37,Sanctions screening alert (name match),Screening tool,Closed - false positive,18,Analyst B,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0007,2026-09-14 15:24,Sanctions screening alert (name match),Screening tool,Closed - false positive,17,Analyst B,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0008,2026-09-28 00:35,Transaction monitoring alert,TM rules engine,Closed - false positive,36,Analyst D,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0009,2026-09-01 07:23,Sanctions screening alert (name match),Screening tool,Escalated to MLRO,11,Analyst C,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0010,2026-09-30 15:06,Sanctions screening alert (name match),Screening tool,Info requested,20,Analyst B,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0011,2026-09-10 03:23,Sanctions screening alert (name match),Screening tool,Closed - false positive,16,Analyst C,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0012,2026-09-29 19:17,Periodic KYC refresh,Refresh calendar,Cleared,33,Analyst B,Refresh: business address changed; requested new proof of address.
+CMP-0013,2026-09-18 21:11,Sanctions screening alert (name match),Screening tool,Closed - false positive,17,Analyst B,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0014,2026-09-02 05:23,Periodic KYC refresh,Refresh calendar,Info requested,24,Analyst D,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0015,2026-09-14 06:12,Transaction monitoring alert,TM rules engine,Escalated to MLRO,50,Analyst D,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0016,2026-09-29 19:46,Transaction monitoring alert,TM rules engine,Closed - false positive,40,Analyst C,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0017,2026-09-20 06:10,Sanctions screening alert (name match),Screening tool,Closed - false positive,28,Analyst D,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0018,2026-09-24 01:21,Transaction monitoring alert,TM rules engine,Info requested,46,Analyst D,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0019,2026-09-17 08:42,Sanctions screening alert (name match),Screening tool,Closed - false positive,17,Analyst A,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0020,2026-09-30 22:16,Periodic KYC refresh,Refresh calendar,Cleared,16,Analyst B,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0021,2026-09-30 08:32,Transaction monitoring alert,TM rules engine,Closed - false positive,19,Analyst D,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0022,2026-09-12 18:36,Sanctions screening alert (name match),Screening tool,Closed - false positive,19,Analyst B,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0023,2026-09-22 01:47,Sanctions screening alert (name match),Screening tool,Closed - false positive,9,Analyst C,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0024,2026-09-14 10:41,Transaction monitoring alert,TM rules engine,Closed - false positive,26,Analyst A,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0025,2026-09-07 10:44,Periodic KYC refresh,Refresh calendar,Cleared,18,Analyst D,Refresh: business address changed; requested new proof of address.
+CMP-0026,2026-09-20 22:35,Transaction monitoring alert,TM rules engine,Closed - false positive,47,Analyst D,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0027,2026-09-03 00:48,Sanctions screening alert (name match),Screening tool,Closed - false positive,21,Analyst A,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0028,2026-09-12 02:25,Periodic KYC refresh,Refresh calendar,Cleared,36,Analyst B,Refresh: business address changed; requested new proof of address.
+CMP-0029,2026-09-22 00:41,Transaction monitoring alert,TM rules engine,Closed - false positive,27,Analyst D,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0030,2026-09-28 22:46,Sanctions screening alert (name match),Screening tool,Closed - false positive,16,Analyst D,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0031,2026-09-01 04:51,Transaction monitoring alert,TM rules engine,Closed - false positive,37,Analyst A,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0032,2026-09-25 10:25,Sanctions screening alert (name match),Screening tool,Closed - false positive,22,Analyst C,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0033,2026-09-12 22:33,Transaction monitoring alert,TM rules engine,Closed - false positive,6,Analyst C,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0034,2026-09-18 20:45,Sanctions screening alert (name match),Screening tool,Closed - false positive,15,Analyst C,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0035,2026-09-29 02:19,Periodic KYC refresh,Refresh calendar,Cleared,19,Analyst A,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0036,2026-09-11 20:35,Sanctions screening alert (name match),Screening tool,Closed - false positive,6,Analyst B,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0037,2026-09-24 05:57,Transaction monitoring alert,TM rules engine,Closed - false positive,21,Analyst D,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0038,2026-09-25 10:57,Transaction monitoring alert,TM rules engine,Closed - false positive,25,Analyst B,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0039,2026-09-14 03:29,Sanctions screening alert (name match),Screening tool,Closed - false positive,12,Analyst A,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0040,2026-09-23 01:19,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,120,Analyst D,High-volume remittance merchant: reviewed ownership chain across 3 jurisdictions.
+CMP-0041,2026-09-23 09:05,Transaction monitoring alert,TM rules engine,Closed - false positive,38,Analyst A,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0042,2026-09-11 00:52,Sanctions screening alert (name match),Screening tool,Closed - false positive,9,Analyst C,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0043,2026-09-08 15:43,Transaction monitoring alert,TM rules engine,Escalated to MLRO,16,Analyst D,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0044,2026-09-27 01:33,Transaction monitoring alert,TM rules engine,Closed - false positive,25,Analyst C,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0045,2026-09-02 21:26,Periodic KYC refresh,Refresh calendar,Cleared,21,Analyst D,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0046,2026-09-30 17:59,Periodic KYC refresh,Refresh calendar,Cleared,28,Analyst C,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0047,2026-09-16 20:44,Transaction monitoring alert,TM rules engine,Escalated to MLRO,49,Analyst A,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0048,2026-09-27 18:10,Sanctions screening alert (name match),Screening tool,Closed - false positive,19,Analyst D,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0049,2026-09-10 09:41,Transaction monitoring alert,TM rules engine,Escalated to MLRO,36,Analyst C,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0050,2026-09-15 17:30,Transaction monitoring alert,TM rules engine,Info requested,20,Analyst C,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0051,2026-09-24 09:52,Transaction monitoring alert,TM rules engine,Info requested,30,Analyst D,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0052,2026-09-30 20:24,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,85,Analyst B,"Crypto-adjacent merchant: reviewed licensing, source of funds, adverse media. Wrote 2-page memo."
+CMP-0053,2026-09-15 15:48,Sanctions screening alert (name match),Screening tool,Closed - false positive,15,Analyst D,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0054,2026-09-13 05:30,Transaction monitoring alert,TM rules engine,Closed - false positive,17,Analyst D,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0055,2026-09-05 05:41,Sanctions screening alert (name match),Screening tool,Closed - false positive,14,Analyst C,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0056,2026-09-15 21:29,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,56,Analyst A,High-volume remittance merchant: reviewed ownership chain across 3 jurisdictions.
+CMP-0057,2026-09-17 07:16,Transaction monitoring alert,TM rules engine,Escalated to MLRO,35,Analyst D,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0058,2026-09-15 16:39,Transaction monitoring alert,TM rules engine,Escalated to MLRO,22,Analyst C,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0059,2026-09-26 18:22,Transaction monitoring alert,TM rules engine,Escalated to MLRO,37,Analyst A,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0060,2026-09-21 21:59,Sanctions screening alert (name match),Screening tool,Closed - false positive,4,Analyst B,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0061,2026-09-20 11:16,Transaction monitoring alert,TM rules engine,Closed - false positive,30,Analyst C,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0062,2026-09-13 11:18,Periodic KYC refresh,Refresh calendar,Cleared,22,Analyst C,Refresh: business address changed; requested new proof of address.
+CMP-0063,2026-09-30 12:47,Sanctions screening alert (name match),Screening tool,Closed - false positive,11,Analyst B,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0064,2026-09-05 07:57,Transaction monitoring alert,TM rules engine,Closed - false positive,37,Analyst D,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0065,2026-09-11 07:03,Sanctions screening alert (name match),Screening tool,Closed - false positive,13,Analyst C,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0066,2026-09-20 05:16,Enhanced due diligence (high-risk merchant),Risk tier = High,Info requested,96,Analyst D,"Crypto-adjacent merchant: reviewed licensing, source of funds, adverse media. Wrote 2-page memo."
+CMP-0067,2026-09-05 01:34,Sanctions screening alert (name match),Screening tool,Closed - false positive,17,Analyst C,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0068,2026-09-07 01:25,Sanctions screening alert (name match),Screening tool,Closed - false positive,17,Analyst B,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0069,2026-09-01 09:15,Transaction monitoring alert,TM rules engine,Closed - false positive,37,Analyst B,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0070,2026-09-19 17:41,Periodic KYC refresh,Refresh calendar,Cleared,32,Analyst D,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0071,2026-09-05 13:44,Sanctions screening alert (name match),Screening tool,Closed - false positive,20,Analyst C,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0072,2026-09-07 08:43,Sanctions screening alert (name match),Screening tool,Closed - false positive,20,Analyst A,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0073,2026-09-28 07:22,Transaction monitoring alert,TM rules engine,Closed - false positive,27,Analyst A,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0074,2026-09-10 08:24,Periodic KYC refresh,Refresh calendar,Cleared,45,Analyst B,Refresh: business address changed; requested new proof of address.
+CMP-0075,2026-09-03 11:36,Sanctions screening alert (name match),Screening tool,Closed - false positive,15,Analyst D,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0076,2026-09-30 00:57,Sanctions screening alert (name match),Screening tool,Closed - false positive,10,Analyst A,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0077,2026-09-07 00:09,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,109,Analyst B,High-volume remittance merchant: reviewed ownership chain across 3 jurisdictions.
+CMP-0078,2026-09-04 07:43,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,73,Analyst A,"Crypto-adjacent merchant: reviewed licensing, source of funds, adverse media. Wrote 2-page memo."
+CMP-0079,2026-09-02 19:30,Sanctions screening alert (name match),Screening tool,Escalated to MLRO,19,Analyst C,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0080,2026-09-19 21:45,Periodic KYC refresh,Refresh calendar,Cleared,23,Analyst D,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0081,2026-09-25 11:15,Transaction monitoring alert,TM rules engine,Closed - false positive,31,Analyst B,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0082,2026-09-18 18:46,Transaction monitoring alert,TM rules engine,Closed - false positive,40,Analyst A,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0083,2026-09-11 20:39,Transaction monitoring alert,TM rules engine,Closed - false positive,41,Analyst D,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0084,2026-09-15 01:49,Transaction monitoring alert,TM rules engine,Closed - false positive,38,Analyst B,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0085,2026-09-07 05:52,Sanctions screening alert (name match),Screening tool,Closed - false positive,20,Analyst C,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0086,2026-09-13 05:33,Sanctions screening alert (name match),Screening tool,Closed - false positive,25,Analyst A,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0087,2026-09-20 12:56,Sanctions screening alert (name match),Screening tool,Closed - false positive,21,Analyst A,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0088,2026-09-17 09:21,Transaction monitoring alert,TM rules engine,Closed - false positive,38,Analyst B,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0089,2026-09-05 16:23,Sanctions screening alert (name match),Screening tool,Closed - false positive,13,Analyst A,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0090,2026-09-01 13:25,Periodic KYC refresh,Refresh calendar,Cleared,22,Analyst D,Refresh: business address changed; requested new proof of address.
+CMP-0091,2026-09-07 19:55,Sanctions screening alert (name match),Screening tool,Closed - false positive,15,Analyst D,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0092,2026-09-19 22:39,Sanctions screening alert (name match),Screening tool,Closed - false positive,14,Analyst C,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0093,2026-09-27 00:16,Periodic KYC refresh,Refresh calendar,Cleared,9,Analyst B,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0094,2026-09-03 02:09,Periodic KYC refresh,Refresh calendar,Info requested,26,Analyst A,Refresh: business address changed; requested new proof of address.
+CMP-0095,2026-09-15 03:21,Periodic KYC refresh,Refresh calendar,Cleared,25,Analyst B,Refresh: business address changed; requested new proof of address.
+CMP-0096,2026-09-14 19:57,Transaction monitoring alert,TM rules engine,Closed - false positive,32,Analyst B,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0097,2026-09-23 10:52,Sanctions screening alert (name match),Screening tool,Info requested,15,Analyst B,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0098,2026-09-19 15:52,Sanctions screening alert (name match),Screening tool,Closed - false positive,6,Analyst C,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0099,2026-09-01 10:28,Periodic KYC refresh,Refresh calendar,Info requested,38,Analyst C,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0100,2026-09-11 20:08,Sanctions screening alert (name match),Screening tool,Closed - false positive,14,Analyst A,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0101,2026-09-05 05:36,Periodic KYC refresh,Refresh calendar,Cleared,28,Analyst D,Refresh: business address changed; requested new proof of address.
+CMP-0102,2026-09-04 20:44,Transaction monitoring alert,TM rules engine,Closed - false positive,51,Analyst B,Round-amount pattern flagged; matched invoices provided by merchant earlier.
+CMP-0103,2026-09-04 09:44,Periodic KYC refresh,Refresh calendar,Cleared,37,Analyst B,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0104,2026-09-15 08:04,Sanctions screening alert (name match),Screening tool,Escalated to MLRO,17,Analyst D,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0105,2026-09-15 20:21,Periodic KYC refresh,Refresh calendar,Cleared,26,Analyst B,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0106,2026-09-27 14:39,Periodic KYC refresh,Refresh calendar,Cleared,29,Analyst A,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0107,2026-09-15 07:00,Transaction monitoring alert,TM rules engine,Closed - false positive,7,Analyst B,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0108,2026-09-13 01:27,Sanctions screening alert (name match),Screening tool,Closed - false positive,11,Analyst A,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0109,2026-09-14 20:17,Periodic KYC refresh,Refresh calendar,Info requested,25,Analyst C,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0110,2026-09-12 07:07,Sanctions screening alert (name match),Screening tool,Info requested,13,Analyst D,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0111,2026-09-14 14:24,Sanctions screening alert (name match),Screening tool,Closed - false positive,15,Analyst D,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0112,2026-09-26 00:52,Transaction monitoring alert,TM rules engine,Closed - false positive,32,Analyst D,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0113,2026-09-07 08:41,Periodic KYC refresh,Refresh calendar,Cleared,39,Analyst B,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0114,2026-09-19 05:32,Sanctions screening alert (name match),Screening tool,Closed - false positive,17,Analyst A,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0115,2026-09-04 09:54,Transaction monitoring alert,TM rules engine,Closed - false positive,52,Analyst D,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0116,2026-09-16 02:08,Sanctions screening alert (name match),Screening tool,Closed - false positive,18,Analyst D,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0117,2026-09-27 02:50,Sanctions screening alert (name match),Screening tool,Closed - false positive,13,Analyst D,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0118,2026-09-17 02:36,Transaction monitoring alert,TM rules engine,Closed - false positive,20,Analyst B,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0119,2026-09-07 18:20,Sanctions screening alert (name match),Screening tool,Closed - false positive,11,Analyst C,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0120,2026-09-26 01:29,Transaction monitoring alert,TM rules engine,Closed - false positive,27,Analyst A,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0121,2026-09-20 01:54,Sanctions screening alert (name match),Screening tool,Closed - false positive,19,Analyst A,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0122,2026-09-17 08:14,Periodic KYC refresh,Refresh calendar,Cleared,20,Analyst D,Refresh: business address changed; requested new proof of address.
+CMP-0123,2026-09-23 20:44,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,94,Analyst B,"Crypto-adjacent merchant: reviewed licensing, source of funds, adverse media. Wrote 2-page memo."
+CMP-0124,2026-09-13 18:51,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,101,Analyst D,High-volume remittance merchant: reviewed ownership chain across 3 jurisdictions.
+CMP-0125,2026-09-11 14:14,Periodic KYC refresh,Refresh calendar,Info requested,35,Analyst C,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0126,2026-09-10 23:39,Periodic KYC refresh,Refresh calendar,Cleared,33,Analyst D,Refresh: business address changed; requested new proof of address.
+CMP-0127,2026-09-08 21:44,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,57,Analyst C,"Crypto-adjacent merchant: reviewed licensing, source of funds, adverse media. Wrote 2-page memo."
+CMP-0128,2026-09-17 00:07,Periodic KYC refresh,Refresh calendar,Info requested,18,Analyst B,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0129,2026-09-23 09:38,Periodic KYC refresh,Refresh calendar,Cleared,27,Analyst A,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0130,2026-09-01 21:46,Transaction monitoring alert,TM rules engine,Closed - false positive,34,Analyst A,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0131,2026-09-10 04:03,Enhanced due diligence (high-risk merchant),Risk tier = High,Info requested,87,Analyst C,"Crypto-adjacent merchant: reviewed licensing, source of funds, adverse media. Wrote 2-page memo."
+CMP-0132,2026-09-27 16:44,Sanctions screening alert (name match),Screening tool,Closed - false positive,17,Analyst B,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0133,2026-09-17 14:33,Periodic KYC refresh,Refresh calendar,Info requested,13,Analyst D,Annual refresh: re-requested directors' IDs and checked registry for changes.
+CMP-0134,2026-09-15 16:22,Sanctions screening alert (name match),Screening tool,Closed - false positive,23,Analyst B,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0135,2026-09-30 02:14,Enhanced due diligence (high-risk merchant),Risk tier = High,Escalated to MLRO,86,Analyst C,"Crypto-adjacent merchant: reviewed licensing, source of funds, adverse media. Wrote 2-page memo."
+CMP-0136,2026-09-08 23:31,Transaction monitoring alert,TM rules engine,Closed - false positive,27,Analyst C,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0137,2026-09-01 01:57,Sanctions screening alert (name match),Screening tool,Escalated to MLRO,19,Analyst A,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0138,2026-09-28 19:47,Transaction monitoring alert,TM rules engine,Closed - false positive,29,Analyst A,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0139,2026-09-04 12:59,Sanctions screening alert (name match),Screening tool,Closed - false positive,17,Analyst A,Name match with differing middle name; pulled ID from onboarding file to confirm DOB.
+CMP-0140,2026-09-16 06:43,Transaction monitoring alert,TM rules engine,Closed - false positive,31,Analyst C,Velocity rule fired on seasonal sales spike; merchant history consistent. Closed.
+CMP-0141,2026-09-04 02:02,Sanctions screening alert (name match),Screening tool,Closed - false positive,16,Analyst A,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0142,2026-09-20 02:22,Transaction monitoring alert,TM rules engine,Info requested,16,Analyst D,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0143,2026-09-16 23:38,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,118,Analyst B,"Crypto-adjacent merchant: reviewed licensing, source of funds, adverse media. Wrote 2-page memo."
+CMP-0144,2026-09-02 12:29,Transaction monitoring alert,TM rules engine,Closed - false positive,39,Analyst C,"Multiple payouts just under threshold. Reviewed 90 days of activity, documented rationale."
+CMP-0145,2026-09-04 09:02,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,106,Analyst A,"Crypto-adjacent merchant: reviewed licensing, source of funds, adverse media. Wrote 2-page memo."
+CMP-0146,2026-09-28 22:15,Sanctions screening alert (name match),Screening tool,Closed - false positive,12,Analyst A,Payee name fuzzy-matched a listed entity; different country and registration number. Cleared.
+CMP-0147,2026-09-08 12:13,Enhanced due diligence (high-risk merchant),Risk tier = High,Cleared,87,Analyst C,"Crypto-adjacent merchant: reviewed licensing, source of funds, adverse media. Wrote 2-page memo."
+CMP-0148,2026-09-19 15:02,Enhanced due diligence (high-risk merchant),Risk tier = High,Info requested,98,Analyst C,High-volume remittance merchant: reviewed ownership chain across 3 jurisdictions.
+CMP-0149,2026-09-05 08:45,Sanctions screening alert (name match),Screening tool,Closed - false positive,5,Analyst B,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.
+CMP-0150,2026-09-20 11:03,Sanctions screening alert (name match),Screening tool,Closed - false positive,10,Analyst D,Partial name match on common surname; DOB and nationality differ from list entry. Cleared after manual comparison.

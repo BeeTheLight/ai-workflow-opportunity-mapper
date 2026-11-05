@@ -1,0 +1,10 @@
+id,title,process,pattern,tasks_linked,monthly_volume,baseline_hours_m,automatable_share,review_overhead,net_hours_saved_m,fte_equivalent,monthly_value_usd,monthly_run_cost_usd,annual_net_value_usd,build_cost_usd,payback_months,feasibility,risk,complexity,priority_score,phase
+OPP-01,Grounded payout-status answers in chat and agent assist,Customer support,Retrieval-grounded self-service,2,1400,210.5,0.65,0.1,123.2,0.77,3449,150,39582,9000,2.7,5,2,S,95.0,1 · Quick wins (0–30 days)
+OPP-03,Onboarding emails and go-live checklist from API logs,Merchant onboarding,Deterministic rules / RPA,2,640,184.0,0.5,0.1,82.8,0.52,2318,150,26021,9000,4.2,5,1,S,82.9,1 · Quick wins (0–30 days)
+OPP-02,Application completeness pre-check at submission,Merchant onboarding,Document extraction and verification,2,860,251.2,0.55,0.2,110.5,0.69,3095,150,35337,9000,3.1,4,2,S,82.1,1 · Quick wins (0–30 days)
+OPP-04,Developer-support answers grounded in API docs and request logs,Customer support,Retrieval-grounded self-service,1,340,206.8,0.4,0.15,70.3,0.44,1969,150,21829,9000,4.9,4,1,S,70.1,1 · Quick wins (0–30 days)
+OPP-05,Settlement reconciliation auto-matching with explanations,Customer support,Deterministic rules / RPA,1,380,284.4,0.6,0.2,136.5,0.85,3822,600,38663,27000,8.4,3,3,M,73.8,2 · Next (30–90 days)
+OPP-07,Transaction-monitoring and KYC-refresh rationale drafting,Compliance operations,LLM drafting with human review,2,750,371.4,0.35,0.3,91.0,0.57,2548,600,23374,27000,13.9,4,3,M,62.0,2 · Next (30–90 days)
+OPP-06,Registry lookup and bank-account name matching,Merchant onboarding,Document extraction and verification,2,780,180.0,0.5,0.25,67.5,0.42,1890,600,15480,27000,20.9,3,3,M,44.6,2 · Next (30–90 days)
+OPP-09,Chargeback evidence pack assembly,Customer support,Agentic case preparation,1,300,256.0,0.35,0.3,62.7,0.39,1756,600,13874,27000,23.4,3,3,M,42.5,2 · Next (30–90 days)
+OPP-08,Sanctions name-match case preparation,Compliance operations,Agentic case preparation,2,1010,208.4,0.45,0.35,61.0,0.38,1707,600,13283,27000,24.4,4,4,M,44.3,3 · Later / needs controls (90+ days)
