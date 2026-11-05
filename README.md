@@ -2,7 +2,7 @@
 
 An AI agent that reads an organization's process data and interview notes, finds the manual work worth automating, explains why with cited evidence, estimates the savings, and produces a phased roadmap a human approves.
 
-**Live demo:** [ai-workflow-opportunity-mapper.streamlit.app](https://ai-workflow-opportunity-mapper-9wfeqwytfcfplxuina5vuq.streamlit.app/) · **Walkthrough:** _add your Loom link_ · **Case study:** [CASE_STUDY.md](CASE_STUDY.md)
+**Live demo:** [Open the app](https://ai-workflow-opportunity-mapper-9wfeqwytfcfplxuina5vuq.streamlit.app/) · **Walkthrough:** _add your Loom link_ · **Case study:** [CASE_STUDY.md](CASE_STUDY.md)
 
 > All data is synthetic and every savings figure is an **estimate**. The demo shows the design and build; it does not show adoption or observed impact.
 
